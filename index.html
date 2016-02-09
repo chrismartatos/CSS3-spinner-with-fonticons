@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!--|  Brought To You By: <///:™  |-->     
+	<title>Custom CSS3 Spinner - Ideal for font icons</title>                                                           
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1">
+	
+	<!--CSS-->
+	<link rel="stylesheet" type="text/css" media="all" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+	
+	<!--jQuery 1.11.1-->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+
+<div id="page">
+
+	<header id="header">
+		<a id="logo" href="http://www.chrismartatos.com" target="_blank"><img src="img/logo.png" width="100" alt="logo"></a>
+	</header>
+	
+	<div id="content"></div>
+	
+	<footer id="footer"></footer>
+</div><!--END #page-->
+
+<!--
+
+	<?php 
+	//PHP script for more interactive spinner - Place the script under <span class="text">Loading</span>
+	
+	//Shuffle numbers 1 to 9
+	$array = range(1, 8);
+	
+	//Input font-icon classes, for example: fa-menu-icon
+	$input = array(
+		1 => "font-icon-class-1", 
+		2 => "font-icon-class-2", 
+		3 => "font-icon-class-3", 
+		4 => "font-icon-class-4", 
+		5 => "font-icon-class-5", 
+		6 => "font-icon-class-6", 
+		7 => "font-icon-class-7", 
+		8 => "font-icon-class-8");
+		
+	//Shuffle classes and spit random
+	shuffle($input);
+	
+	//Shuffle numbers 1 to 8
+	shuffle($array);
+	
+	for ($i=0,$c=count($array); $i<$c; $i++) 
+	{
+	    echo '<div class="'. $input[$i] .' spinner-animation icon-delay-'. $array[$i] .'"></div>';
+	}
+	?>
+-->
+
+
+<div class="site-preloader">
+	<a href="http://www.bluenigma.com" target="_blank" class="example">Click here for example</a>
+	<div class="icon-spinner">
+	<span class="text">Loading</span>
+		<div class="font-icon-class-1 spinner-animation icon-delay-1">Font-Icon 1</div>
+		<div class="font-icon-class-2 spinner-animation icon-delay-2">Font-Icon 2</div>
+		<div class="font-icon-class-3 spinner-animation icon-delay-3">Font-Icon 3</div>
+		<div class="font-icon-class-4 spinner-animation icon-delay-4">Font-Icon 4</div>
+		<div class="font-icon-class-5 spinner-animation icon-delay-5">Font-Icon 5</div>
+		<div class="font-icon-class-6 spinner-animation icon-delay-6">Font-Icon 6</div>
+		<div class="font-icon-class-7 spinner-animation icon-delay-7">Font-Icon 7</div>
+		<div class="font-icon-class-8 spinner-animation icon-delay-8">Font-Icon 8</div>
+	</div>
+</div>
+	
+</body>
+</html>
