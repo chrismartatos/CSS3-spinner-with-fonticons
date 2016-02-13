@@ -73,15 +73,14 @@
 }
 
 .site-preloader .icon-spinner { 
-	width: 130px; 
-	height: 130px; 
-	top:50%; 
-	z-index: 999; 
-	margin: -65px auto 0; 
+	width: 130px;
+	height: 130px;
+	position: relative;
+	top:50%;
+	margin: -65px auto 0;
 	background-color: #ad2e2a;
 	display: block;
-	position: relative;
-		
+	
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
