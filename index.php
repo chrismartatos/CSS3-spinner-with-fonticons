@@ -17,7 +17,7 @@
 <body>
 
 <div id="page">
-
+	
 	<header id="header">
 		<a id="logo" href="http://www.chrismartatos.com" target="_blank"><img src="img/logo.png" width="100" alt="logo"></a>
 	</header>
@@ -28,7 +28,7 @@
 </div><!--END #page-->
 
 
-<!--Site prelaoder - Usually goes at the the very bottom but feel free to place it wherever you like-->
+<!--Site preloader-->
 <div class="site-preloader">
 	<a href="http://www.bluenigma.com" target="_blank" class="example">Click here for example</a>
 	<div class="icon-spinner">
@@ -68,7 +68,7 @@
 </div>
 
 
-<!--jQuery 1.11.1-->
+<!--jQuery-->
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
