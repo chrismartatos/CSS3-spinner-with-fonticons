@@ -61,7 +61,7 @@
 		
 		for ($i=0,$c=count($array); $i<$c; $i++) 
 		{
-		    echo '<div class="'. $input[$i] .' spinner-animation icon-delay-'. $array[$i] .'"></div>';
+		    echo '<div class="'. $input[$i] .' spinner-animation icon-delay-'. $array[$i] .'">Font-Icon '. $array[$i] .'</div>';
 		}
 		?>
 	</div>
