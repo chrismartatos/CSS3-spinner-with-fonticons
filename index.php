@@ -33,14 +33,37 @@
 	<a href="http://www.bluenigma.com" target="_blank" class="example">Click here for example</a>
 	<div class="icon-spinner">
 	<div class="text">Loading<span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span></div>
-		<div class="font-icon-class-1 spinner-animation icon-delay-1">Font-Icon 1</div>
-		<div class="font-icon-class-2 spinner-animation icon-delay-2">Font-Icon 2</div>
-		<div class="font-icon-class-3 spinner-animation icon-delay-3">Font-Icon 3</div>
-		<div class="font-icon-class-4 spinner-animation icon-delay-4">Font-Icon 4</div>
-		<div class="font-icon-class-5 spinner-animation icon-delay-5">Font-Icon 5</div>
-		<div class="font-icon-class-6 spinner-animation icon-delay-6">Font-Icon 6</div>
-		<div class="font-icon-class-7 spinner-animation icon-delay-7">Font-Icon 7</div>
-		<div class="font-icon-class-8 spinner-animation icon-delay-8">Font-Icon 8</div>
+		<?php 
+		/***
+		   PHP script for more interactive spinner by spitting out random font-icon class and animation delay
+		   Replace this script with all the div's .spinner-animation
+		***/
+		
+		//Shuffle numbers 1 to 9 - Used for animation delay
+		$array = range(1, 8);
+		
+		//Input font-icon classes, for example: fa-search-icon
+		$input = array(
+			1 => "font-icon-class-1", 
+			2 => "font-icon-class-2", 
+			3 => "font-icon-class-3", 
+			4 => "font-icon-class-4", 
+			5 => "font-icon-class-5", 
+			6 => "font-icon-class-6", 
+			7 => "font-icon-class-7", 
+			8 => "font-icon-class-8");
+			
+		//Shuffle font icons classes
+		shuffle($input);
+		
+		//Shuffle numbers 1 to 8 for animation delay
+		shuffle($array);
+		
+		for ($i=0,$c=count($array); $i<$c; $i++) 
+		{
+		    echo '<div class="'. $input[$i] .' spinner-animation icon-delay-'. $array[$i] .'"></div>';
+		}
+		?>
 	</div>
 </div>
 
