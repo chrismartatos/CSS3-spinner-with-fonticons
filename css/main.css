@@ -2,32 +2,15 @@
 /*--------------------------------------------------------------------
 		Header // Footer
 --------------------------------------------------------------------*/
-#header,
-#footer { 
+#header { 
 	width: 100%; 
 	display: block; 
 	position: fixed; 
-	z-index: 5; 
+	z-index: 9999; /*Use with cause*/
 	left: 0; 
-	right: auto; 
-}
-
-#header {
 	top:0;
 	height: 50px;
 	background-color: rgba(255,255,255,.8); 
-	z-index: 99999;/*More than preloader just to show logo*/
-}
-
-#footer {
-	bottom: 4%;
-	padding: 8px 0;
-}
-
-#footer a {
-	font:600 38px/38px 'Open Sans';
-	color: #FFF;
-	text-decoration: none;
 }
 
 #logo {
@@ -36,19 +19,46 @@
 	padding: 10px 0 0;
 }
 
-#logo img { 
+#logo > img { 
 	display: inline;
 }
-
 
 
 /*--------------------------------------------------------------------
 		Layout
 --------------------------------------------------------------------*/
+body {
+	background-color: #000;
+}
+
+#content {
+	width: 50%;
+	margin: 0 auto;
+	padding: 10% 0;
+	text-align: center;
+	color: #FFF;
+}
+
+#content p {
+	color: #FFF;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+#content img {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------------
+		Custom Spinner
+--------------------------------------------------------------------*/
+
 .example {
-	position: relative;
-	top:35%;
+	position: fixed;
+	bottom:2%;
+	left: 0;
 	display: block;
+	width: 100%;
 	text-align: center;
 	color: #000;
 	text-decoration: underline;
@@ -56,10 +66,14 @@
 	font-size: 11px;
 }
 
+.example > button {
+	display: block;
+	position: relative;
+	width: 120px;
+	margin: 15px auto;
+	padding: 2px 0;
+}
 
-/*--------------------------------------------------------------------
-		Custom Spinner
---------------------------------------------------------------------*/
 .site-preloader { 
 	position: fixed; 
 	left: 0; 
@@ -67,8 +81,8 @@
 	width: 100%; 
 	height: 100%; 
 	min-height: 100%;
-	background-color: rgba(255,255,255,.9); 
-	z-index: 9999; 
+	background-color: rgba(255,255,255,.9); /*Change to 1 if you want to not show the content in the background */ 
+	z-index: 5; /*Use with cause*/
 	display: block;
 }
 
@@ -85,9 +99,23 @@
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	
-	/*Bounce animation: Delete if don't like it */
-	/*-webkit-animation:circleBounce 1s ease-in-out infinite;
-    animation:circleBounce 1s ease-in-out infinite;*/
+	border: 5px solid #991c20;
+	
+	/* Fade Up animation - Delete if you don't like */
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    
+    -webkit-animation-direction: alternate;
+  	animation-direction: alternate;
+  	
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }
 
 .site-preloader .icon-spinner .text { 
@@ -168,18 +196,34 @@
   
 }
 
-/*  Bounce - Circle bounce animation Remove if you don't like it */
-@-webkit-keyframes circleBounce {
-        0%   {  transform: scale(1);   -webkit-transform: scale(1); }
-        50%  {  transform: scale(1.2); -webkit-transform: scale(1.2); }
-        100% {  transform: scale(1);   -webkit-transform: scale(1); }
-}        
-  
-@keyframes circleBounce {
-        0%   {  transform: scale(1);   -webkit-transform: scale(1); }
-        50%  {  transform: scale(1.2); -webkit-transform: scale(1.2); }
-        100% {  transform: scale(1);   -webkit-transform: scale(1); }
-} 
+/*  FadeIn Spinner - Remove if you don't like it */
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
 
 
 /*  Dots - Remove if you don't like it */
